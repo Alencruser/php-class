@@ -7,10 +7,8 @@ class StrUtils {
 		$this->_string=$str;
 		$this->_ugly=$str;
 	}
-	//Fonctions de modifications, les return permettent de verifier par les tests et les echo pour un rendu visuel sur page html
 	public function bold($s=false){
 		if ($s==false){
-			echo "<p><strong>".$this->_string."</strong></p>";
 			return "<p><strong>".$this->_string."</strong></p>";
 		}
 		if(strpos($this->_ugly, "<strong>")){
@@ -21,7 +19,6 @@ class StrUtils {
 	}
 	public function italic($s=false){
 		if($s==false){
-			echo "<p><i>".$this->_string."</i></p>";
 			return "<p><i>".$this->_string."</i></p>";
 		}
 		if(strpos($this->_ugly, "<i>")){
@@ -32,7 +29,6 @@ class StrUtils {
 	}
 	public function underline($s=false){
 		if($s==false){
-			echo "<p><u>".$this->_string."</u></p>";
 			return "<p><u>".$this->_string."</u></p>";
 		}
 		if(strpos($this->_ugly,"<u>")){
@@ -43,7 +39,6 @@ class StrUtils {
 	}
 	public function capitalize($s=false){
 		if($s==false){
-			echo "<p style='text-transform:capitalize;'>".$this->_string."</p>";
 			return "<p style='text-transform:capitalize;'>".$this->_string."</p>";
 		}
 		if(strpos($this->_ugly,"style")){
@@ -56,7 +51,6 @@ class StrUtils {
 		$this->bold(true);
 		$this->italic(true);
 		$this->underline(true);
-		echo $this->_ugly;
 		return $this->_ugly;
 	}
 }
@@ -68,6 +62,6 @@ $phrase= new StrUtils("Hello test");
 	<title></title>
 </head>
 <body>
-	<?php $phrase->uglify();?>
+	<?php echo $phrase->uglify();?>
 </body>
 </html>
