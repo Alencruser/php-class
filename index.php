@@ -67,7 +67,7 @@ $phrase= new StrUtils("Hello test");
 	<h1>Bold :</h1>
 	<?php echo $phrase->bold(); ?>
 	<h1>Italic :</h1>
-	<?php echo $hrase->italic(); ?>
+	<?php echo $phrase->italic(); ?>
 	<h1>Underline :</h1>
 	<?php echo $phrase->underline(); ?>
 	<h1>Capitalize :</h1>
