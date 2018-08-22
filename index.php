@@ -62,6 +62,15 @@ $phrase= new StrUtils("Hello test");
 	<title></title>
 </head>
 <body>
+	<h1>Uglify :</h1>
 	<?php echo $phrase->uglify();?>
+	<h1>Bold :</h1>
+	<?php echo $phrase->bold(); ?>
+	<h1>Italic :</h1>
+	<?php echo $hrase->italic(); ?>
+	<h1>Underline :</h1>
+	<?php echo $phrase->underline(); ?>
+	<h1>Capitalize :</h1>
+	<?php echo $phrase->capitalize(); ?>
 </body>
 </html>
